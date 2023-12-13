@@ -1,0 +1,59 @@
+ 
+
+class produit() :
+    def __init__(self,reference,designation,prix-vente,prix-achat) :
+        self._reference=reference  
+        self._designation= designation
+        self._prix-vente= prix-vente
+        self._prix-achat= prix-achat
+
+    def getref(self) :
+         return    self._reference
+    def getpr(self) :
+         return    self._prix-achat    
+    def getdes(self) :
+         return   self._designation
+    def getpri(self) :
+         return    self._prix-vente    
+    def setref(self , new) :
+           self._reference  =new    
+    def setdes(self ,old) :
+           self._designation  =old           
+   def equals(self,m) :
+        if self.reference= m.reference :
+          return True
+        else :
+              return False
+   def __str__(self):
+         return f"( la reference est : {self.getref} la designation : {self.getdes} , le prix dachat :  {self.getpr} , le prix de vente :  {self.getpri})"
+         
+    
+    
+    
+       
+ 
+
+class comande(produit) :  
+    def __init__(self,date,quantite,reference,designation,prix-vente,prix-achat) :
+        super().__init__(date,quantite)
+        self.date=date
+        self.quantite=quantite
+
+        
+    def getdate(self) :
+         return self.date    
+    def getquantite(self) :
+         return self.quantite    
+
+    def setquantite(self ,z) :
+        self.quantite =z
+
+    def setdate(self ,x) :
+        self.date =x
+
+     
+    def tostring(self):
+         return f"( la date est : {self.date} la quantite : {self.quantite})"
+         
+         
+ 
